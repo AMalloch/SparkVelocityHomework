@@ -22,7 +22,7 @@ public class Randomiser
         return nameList.get(0);
     }
 
-    public ArrayList<String> getManyNames(){
+    public ArrayList<String> getTwoRandomNames(){
         ArrayList<String> multiNames = new ArrayList<>();
         multiNames.add(shuffleNameListGetName());
         multiNames.add(shuffleNameListGetName());

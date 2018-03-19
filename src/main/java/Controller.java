@@ -2,13 +2,9 @@ import models.Randomiser;
 import spark.ModelAndView;
 import spark.Spark;
 import spark.template.velocity.VelocityTemplateEngine;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 
 import static spark.Spark.get;
-
 public class Controller {
     private static Randomiser randomiser;
 
@@ -24,6 +20,10 @@ public class Controller {
             model.put("result", result);
             return new ModelAndView(model, "randomiser.vtl");
         }, velocityTemplateEngine);
+
+        Spark.exception(Exception.class, (exception, request, response) -> {
+            exception.printStackTrace();
+        });
    }
 
 }
