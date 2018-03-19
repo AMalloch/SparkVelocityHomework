@@ -18,14 +18,12 @@ public class Controller {
 
     public static void main(String[] args) {
         VelocityTemplateEngine velocityTemplateEngine = new VelocityTemplateEngine();
-        get("/random", (req, res) -> {
-            randomiser.shuffleNameList();
-            return new ModelAndView(model, "result.vtl");
+        get("/one", (req, res) -> {
+            String result = randomiser.shuffleNameListGetName();
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("result", result);
+            return new ModelAndView(model, "randomiser.vtl");
         }, velocityTemplateEngine);
-
-        Spark.exception(Exception.class, (exception, request, response) -> {
-            exception.printStackTrace();
-        });
    }
 
 }
