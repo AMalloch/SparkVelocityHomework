@@ -7,10 +7,16 @@ import java.util.Collections;
 public class Randomiser
 {
 
-    private final ArrayList<String> nameList;
+    private ArrayList<String> nameList;
 
     public Randomiser() {
-        this.nameList = new ArrayList<>(Arrays.asList("Angus", "Malcolm", "Steph", "Mike", "Sarah", "John"));
+        this.nameList = new ArrayList<>();
+        nameList.add("Angus");
+        nameList.add("Baylis");
+        nameList.add("Chris");
+        nameList.add("Jamie");
+        nameList.add("Euan");
+        nameList.add("Gordon");
     }
 
     public ArrayList<String> getNameList() {
