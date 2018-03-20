@@ -33,4 +33,12 @@ public class Randomiser
         multiNames.add(shuffleNameListGetName());
         return multiNames;
     }
+
+    public ArrayList<String> getThreeRandomNames(){
+        ArrayList<String> multiNames = new ArrayList<>();
+        multiNames.add(shuffleNameListGetName());
+        multiNames.add(shuffleNameListGetName());
+        multiNames.add(shuffleNameListGetName());
+        return multiNames;
+    }
 }
